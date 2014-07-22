@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HeadTrack</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<canvas id="inputCanvas" width="320" height="240" style="display:none"></canvas>
+	<video id="inputVideo" autoplay loop></video>
+	<div class="content">
+		<canvas id="gameCanvas" width="1000" height="700"></canvas>
+		<img src="img/road.jpg" id="road1" class="hide" />
+		<img src="img/road2.jpg" id="road2" class="hide" />
+		<img src="img/road3.jpg" id="road3" class="hide" />
+		<img src="img/road4.jpg" id="road4" class="hide" />
+		<img src="img/road5.jpg" id="road5" class="hide" />
+		<img src="img/road6.jpg" id="road6" class="hide" />
+		<img src="img/road7.jpg" id="road7" class="hide" />
+		<img src="img/road8.jpg" id="road8" class="hide" />
+		<img src="img/car-big.png" id="car" class="hide" />
+		<img src="img/car-blue-big.png" id="car-blue" class="hide" />
+		<img src="img/car-red-big.png" id="car-red" class="hide" />
+		<img src="img/car-orange-big.png" id="car-orange" class="hide" />
+		<p id="again">Play Again?</p>
+		<p id="highscore" class="hide">0</p>
+	</div>
+	<script src="js/headtrackr.js"></script>	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/game.js"></script>
+	<script type="text/javascript">
+		var videoInput = document.getElementById('inputVideo');
+		var canvasInput = document.getElementById('inputCanvas');
+		var htracker = new headtrackr.Tracker();
+		htracker.init(videoInput, canvasInput);
+		htracker.start();
+		document.addEventListener("headtrackingEvent",getPositionHead,false);
+		document.addEventListener("facetrackingEvent",getPositionFace,false);
+	</script>
+</body>
+</html>

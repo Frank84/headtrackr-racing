@@ -1,0 +1,32 @@
+body {
+	background-color: #333;
+}
+.content {
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	margin: auto;
+}
+#gameCanvas {
+	display: block;
+	margin: auto;
+	border: solid 1px #ccc;
+}
+#inputVideo {
+	visibility: hidden;
+}
+.hide {
+	display: none;
+}
+#again {
+	position: absolute;
+	text-transform: uppercase;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: bold;
+	left: 45.7%;
+	top: 50%;
+	color: white;
+	display: none;
+	cursor: pointer;
+}
